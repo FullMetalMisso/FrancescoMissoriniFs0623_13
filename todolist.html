@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <form action="">
+        <label for="task">Aggiungi un task qui</label>
+        <input type="text" id="task" name="task" >
+        <button type="submit" id="submit-btn">crea</button>
+        
+    </form>
+
+
+    <script>
+        inserimento = function(invio) {
+        invio.preventDefault()  
+        
+        let contenitoreLista= [task.value]
+        let lista = document.createElement("ul")
+        for(let riga of contenitoreLista) {
+            let voce = document.createElement("li")
+                voce.classList.add("elementoRiga")
+                voce.textContent= riga
+            lista.appendChild(voce)
+                voce.addEventListener("click", function() {
+                voce.style.textDecoration = "line-through"
+            })
+
+        document.body.appendChild(lista)
+       
+        button = document.createElement("BUTTON")
+        button.classList.add("bottone")
+        simboloButton = document.createTextNode("Cancella")
+        button.appendChild(simboloButton)
+        voce.appendChild(button)
+        } 
+    
+    }
+    function rimuoviRiga() {
+          const rimuoviRiga = document.getElementById("bottone")
+          rimuoviRiga.addEventListener("click", operazione )
+        }
+
+const pulsante = document.getElementById("submit-btn")
+pulsante.addEventListener("click", inserimento)
+
+        
+</script>
+</body>
+</html>
